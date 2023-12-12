@@ -5,12 +5,15 @@ import (
     "product-backend/pkg/api"
     "product-backend/pkg/db"
     "log"
+    "time"
     "net/http"
     "os"
 )
 
 func main() {
     log.Print("server has started")
+
+    time.Sleep(10 * time.Second)
 
     pgdb, err := db.StartDB()
     if err != nil {
